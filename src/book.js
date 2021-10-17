@@ -13,13 +13,13 @@ function createTitle(bookIdea) {
 }
 //////////////////////////////////////////////////
 function buildMainCharacter(name, age, pronouns) {
-  var character = {
+  var myCharacter = {
     name: name,
     age: age,
     pronouns: pronouns,
   }
-  console.log(character);
-  return character;
+  console.log(myCharacter);
+  return myCharacter;
 }
 ///////////////////////////////////////////////////
 function saveReview(addReviews, reviewsArray) {
@@ -36,23 +36,29 @@ function saveReview(addReviews, reviewsArray) {
 }
 
 ///////////////////////////////////////////////////
-//function calculatePageCount(bookTitle, bookPageCount) {
-  //for (var i = 0; i < bookTitle.length; i++) {
-    //return
-  //}
-//}
+function calculatePageCount(bookTitle, bookPageCount) {
+  for (var i = 0; i < bookTitle.length; i++) {
+    return
+  }
+}
 
 ////////////////////////////////////////////////////
-function writeBook(title, mainCharacter) {
+function writeBook(bookTitle, bookCharacter, genre) {
   var myBook = {
-    bookTitle: title,
-    bookCharacter: mainCharacter,
+    title: bookTitle,
+    mainCharacter: bookCharacter,
     pageCount: 340,
+
     genre: "fantasy",
   };
-
   console.log(myBook);
-  return myBook.bookTitle, myBook.bookCharacter, myBook.genre;
+  return myBook;
+
+}
+
+////////////////////////////////////////////////////
+function editBook() {
+
 }
 
 ///////////////////////////////////////////////////
@@ -60,7 +66,7 @@ module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
-  //calculatePageCount,
+  calculatePageCount,
   writeBook,
-  // editBook
+  editBook
 }
