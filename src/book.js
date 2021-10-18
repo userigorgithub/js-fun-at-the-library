@@ -23,42 +23,38 @@ function buildMainCharacter(name, age, pronouns) {
 }
 ///////////////////////////////////////////////////
 function saveReview(addReviews, reviewsArray) {
-  reviewsArray.push(addReviews);
+
   if (reviewsArray.includes(addReviews)) {
-    console.log(reviewsArray);
     return reviewsArray;
   } else {
-    console.log(addReviews);
+    reviewsArray.push(addReviews);
     return addReviews;
   }
-  console.log(reviewsArray);
-  return reviewsArray;
 }
 
 ///////////////////////////////////////////////////
-function calculatePageCount(bookTitle, bookPageCount) {
-  for (var i = 0; i < bookTitle.length; i++) {
-    return
-  }
-}
+function calculatePageCount(bookTitle) {
 
+  return bookTitle.length *20;
+
+}
 ////////////////////////////////////////////////////
 function writeBook(bookTitle, bookCharacter, genre) {
   var myBook = {
     title: bookTitle,
     mainCharacter: bookCharacter,
-    pageCount: 340,
-
+    pageCount: bookTitle.length *20,
     genre: "fantasy",
   };
-  console.log(myBook);
   return myBook;
 
 }
 
 ////////////////////////////////////////////////////
-function editBook() {
-
+function editBook(bookTitle) {
+  var numberOfPages = bookTitle.pageCount;
+  console.log(numberOfPages * 0.75);
+  return numberOfPages * 0.75;
 }
 
 ///////////////////////////////////////////////////
