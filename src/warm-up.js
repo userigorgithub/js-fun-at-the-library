@@ -18,7 +18,7 @@ var pages = 500;
 pages = pages / 4;
 
 // Initialize a new variable "movie", but leave it undefined
-var movie = "";
+var movie;
 
 // Create a variable named "sequel", and assign it to a be a sequel of your
 // book (made up or not!). Your sequel must make use of your "title" variable from above
