@@ -94,9 +94,9 @@ describe('Librarian (class)', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
     var threeDaysLate = librarian.calculateLateFee(3);
-    var sevenDaysLate = librarian.calculateLateFee(9);
+    var nineDaysLate = librarian.calculateLateFee(9);
 
     assert.equal(threeDaysLate, 1);
-    assert.equal(sevenDaysLate, 3);
+    assert.equal(nineDaysLate, 3);
   });
 });

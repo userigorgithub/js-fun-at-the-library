@@ -4,6 +4,7 @@ class Librarian {
     this.library = library;
     this.isMorning = false;
   }
+
   greetPatron(patronName, isMorning) {
     this.isMorning = true;
     if (isMorning) {
@@ -11,6 +12,7 @@ class Librarian {
     }
     return `Hello, ${patronName}!`;
   }
+
   findBook(book) {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === book) {
@@ -32,8 +34,9 @@ class Librarian {
     }
     return `Sorry, we do not have ${book}`;
   }
-  calculateLateFee(fee) {
-    return Math.ceil(fee * 0.25);
+
+  calculateLateFee(days) {
+    return Math.ceil(days * 0.25);
   }
 }
 
